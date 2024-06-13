@@ -5,11 +5,33 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-Route::get('/test', function () {
-    return view('test');
+
+Route::get('/inscription', function () {
+    return view('inscription');
 });
+
+Route::get('/connexion', function () {
+    return view('connexion');
+});
+
+Route::get('/modification', function () {
+    return view('modification');
+});
+
+Route::get('/suppression', function () {
+    return view('suppression');
+});
+
+Route::get('/membre', function () {
+    return view('membre');
+});
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

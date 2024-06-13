@@ -4,11 +4,11 @@
             @csrf
             <textarea
                 name="message"
-                placeholder="{{ __('What\'s on your mind?') }}"
+                placeholder="{{ __('Que voulez vous publier ?') }}"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
             >{{ old('message') }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
-            <x-primary-button class="mt-4">{{ __('Chirp') }}</x-primary-button>
+            <x-primary-button class="mt-4">{{ __('Publier') }}</x-primary-button>
         </form>
 
         <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
@@ -23,7 +23,7 @@
                                 <span class="text-gray-800">{{ $chirp->user->name }}</span>
                                 <small class="ml-2 text-sm text-gray-600">{{ $chirp->created_at->format('j M Y, g:i a') }}</small>
                                 @unless ($chirp->created_at->eq($chirp->updated_at))
-                                    <small class="text-sm text-gray-600"> &middot; {{ __('edited') }}</small>
+                                    <small class="text-sm text-gray-600"> &middot; {{ __('Modifié') }}</small>
                                 @endunless
                             </div>
                             @if ($chirp->user->is(auth()->user()))
@@ -37,13 +37,13 @@
                                     </x-slot>
                                     <x-slot name="content">
                                         <x-dropdown-link :href="route('chirps.edit', $chirp)">
-                                            {{ __('Edit') }}
+                                            {{ __('Modifier') }}
                                         </x-dropdown-link>
                                         <form method="POST" action="{{ route('chirps.destroy', $chirp) }}">
                                             @csrf
                                             @method('delete')
                                             <x-dropdown-link :href="route('chirps.destroy', $chirp)" onclick="event.preventDefault(); this.closest('form').submit();">
-                                                {{ __('Delete') }}
+                                                {{ __('Supprimer') }}
                                             </x-dropdown-link>
                                         </form>
                                     </x-slot>
