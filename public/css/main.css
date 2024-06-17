@@ -1,0 +1,153 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Slab:wght@100;200;300&display=swap');
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: .1rem;
+    background-color: #000000;
+    color: #ffffff;
+    height: 100vh;
+    max-width: 100vw;
+}
+
+h1,h2,h3,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+}
+
+input[type="text"],
+input[type="age"],
+input[type="ville"],
+input[type="email"],
+input[type="password"],
+input[type="submit"]{
+    border: 0;
+    background: none;
+    font-size: inherit;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* theme */
+
+/* CSS pour la page d'accueil */
+h2{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+.Accueil p{
+    margin-top: 1vh;
+}
+
+.Accueil a{
+    background-color: #589DE1;
+    border: solid 2px #5d5c5c;
+    border-radius: 10%;
+    padding: .3rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+/* Fin de la CSS pour la page d'accueil */
+
+/* Positionnement du bouton de retour à l'accueil */
+header img{
+    max-width: 10rem;
+    margin-top: 3vh;
+    margin-left: 1vw;
+}
+
+/* CSS pour la mise en forme des formulaires */
+
+fieldset{
+    position: relative;
+    top: 2vmax;
+    left: 50vw;
+    width: 90rem;
+    height: auto;
+    border-radius: 1rem;
+    border: solid .1rem hsl(221, 44%, 41%);
+    transform: translate(-50%, 0);
+}
+
+fieldset legend{
+    padding: 1rem;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bolder;
+}
+
+form *{
+    display: block;
+    padding: 1rem 0;
+}
+
+form input{
+    width: 100%;
+    line-height: 3.5rem;
+    padding: .5rem;
+}
+
+input[type="text"],
+input[type="age"],
+input[type="ville"],
+input[type="email"],
+input[type="password"],
+input[type="submit"]{
+    
+    border-bottom: solid .1rem #ccc; 
+    background: rgba(236, 232, 223, 0.6); 
+    width: 100%;
+    border-style: none;
+}
+
+form [placeholder]{
+    font-style: italic;
+    transition: all .6s ease-in-out;
+}
+
+form [placeholder]:focus{
+    font-style: normal;
+}
+
+form input:focus:not(form input[type="submit"])
+{
+    outline: 0;
+    box-shadow: 0 0 2rem rgb(96, 171, 252);
+    width: 100%;
+    border-bottom: solid .1rem rgb(79, 79, 79);
+}
+
+/* Bouton "envoyer" */
+form input[type="submit"]{
+   background-color: rgb(99, 141, 233);
+    margin-top: 1rem;
+    margin-left: 25rem;
+    cursor: pointer;
+    width: 35%;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: .4rem;
+}
+/* Bouton "envoyer" */
+
+/* Fin de la CSS pour les formulaires */
+
+footer{
+    text-align: center;
+    position: absolute;
+    width: 100%; height: 50px;
+    bottom: 0; left: 0; right: 0;
+}
