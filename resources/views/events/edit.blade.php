@@ -10,9 +10,8 @@
         @method('PUT')
         
         <div class="field">
-            <label class="label" for="contenu">Contenu</label>
-            <div class="control">
-                <input class="input" type="text" name="contenu" id="contenu" value="{{ old('contenu', $event->contenu) }}">
+            <div class="txtModifier">
+                <textarea class="textarea" name="contenu" id="contenu">{{ old('contenu', $event->contenu) }}</textarea>
             </div>
             @if ($errors->has('contenu'))
                 <p class="help is-danger">{{ $errors->first('contenu') }}</p>
@@ -20,7 +19,7 @@
         </div>
 
         <div class="field">
-            <div class="control">
+            <div class="btnModifier">
                 <button type="submit" class="button is-primary">Mettre à jour</button>
             </div>
         </div>

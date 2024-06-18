@@ -13,8 +13,10 @@
                 @if($utilisateur->id == auth()->user()->id)
                     <li>
                         <br>
-                        <h2> {{ $utilisateur->nom }}&nbsp;{{ $utilisateur->prenom }} </h2>
-                        <a href="/{{ $utilisateur->email }}">Publiez quelque chose !{{-- {{ $utilisateur->nom }}&nbsp;{{$utilisateur->prenom}} --}} </a>
+                        <h2 class="utilisateur"> {{ $utilisateur->nom }}&nbsp;{{ $utilisateur->prenom }} </h2>
+                        <div class="nvPub">
+                            <a href="/{{ $utilisateur->email }}">Ajouter une publication</a>
+                        </div>
                         {{-- <br><br>
                         Age : {{ $utilisateur->age }} <br>
                         Ville : {{ $utilisateur->ville }} <br>

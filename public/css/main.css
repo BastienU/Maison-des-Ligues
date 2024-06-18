@@ -217,6 +217,32 @@ form input[type="submit"]{
 }
 /* Fin css pour la page du formulaire de publication d'évènements */
 
+h2.utilisateur{
+    font-size: 60px;
+}
+
+
+/* Début css pour la page utilisateur */
+.nvPub{
+    margin-top: 5vh;
+}
+
+.nvPub a{
+    font-size: 1.6rem;
+    background-color: #589DE1;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 1.5rem;
+    text-decoration:none;
+    z-index: 1;
+}
+/* Fin css pour la page utilisateur */
+
+
+/* Début css pour la page évènements */
 .publication{
     margin-top: -7vh;
     margin-left: 2vw;
@@ -228,12 +254,13 @@ form input[type="submit"]{
     padding: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     border-radius: 1.5rem;
     text-decoration:none;
     z-index: 1;
 }
+/* Fin css pour la page évènements */
 
 .modifier{
     margin-top: 5rem;
@@ -246,7 +273,7 @@ form input[type="submit"]{
     padding: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     border-radius: 1.5rem;
     text-decoration:none;
@@ -267,6 +294,39 @@ form input[type="submit"]{
     border-color: transparent;
     z-index: 0;
 }
+
+/* Début Css pour la page de modification d'évènement */
+
+.txtModifier{
+    margin-left: 30vw;
+}
+
+.txtModifier textarea{
+    background-color: #fff;
+    width: 80rem;
+    height: 20rem;
+}
+
+.btnModifier{
+    margin-left: 47vw;
+}
+
+.btnModifier button{
+    font-size: 1.6rem;
+    background-color: #589DE1;
+    padding: 0.65rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(235, 235, 235);
+    font-weight: bold;
+    border-radius: 1.5rem;
+    /* margin-top: -2.9rem;
+    margin-left: 42vw; */
+    border-color: transparent;
+    z-index: 0;
+}
+
+/* Fin Css pour la page de modification d'évènement */
 
 footer{
     color: white;
