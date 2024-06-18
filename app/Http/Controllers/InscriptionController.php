@@ -13,6 +13,7 @@ class InscriptionController extends Controller
 
     public function traitement() 
     {
+        //dump("Vous êtes dans la méthode Traitement");
         // Permet de récupérer toutes les informations du formulaire d'inscription.
         request()->validate([
             'nom' => ['required'],

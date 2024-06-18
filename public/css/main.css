@@ -40,12 +40,59 @@ input[type="submit"]{
 }
 
 /* theme */
+nav{
+    display: inline-block;
+    position: fixed;
+    top: 0vh;
+    left: 0vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 8rem;
+    background-color: #589DE1;
+    box-shadow: 0px 5px 12px #5c5c5c;
+    z-index: 100;
+}
+nav img{
+    display: inline-block;
+    margin-top: 0.3vh;
+    margin-left: 1rem;
+    max-width: 7rem;
+}
+
+nav h1{
+    text-align: center;
+    color: #ffffff;
+    margin-top: -6vh;
+    font-weight: bolder;
+}
+
+nav ul{
+    text-align: right;
+    margin-top: -3.5rem;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 2vh;
+}
+
+
+/* Nav menu buttons */
+nav ul li a{
+    padding: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover{
+    background-color: #1e2934;
+}
 
 /* CSS pour la page d'accueil */
 h2{
     text-align: center;
     font-weight: bold;
-    margin-top: 2vh;
 }
 
 .Accueil p{
@@ -61,13 +108,6 @@ h2{
     text-decoration: none;
 }
 /* Fin de la CSS pour la page d'accueil */
-
-/* Positionnement du bouton de retour à l'accueil */
-header img{
-    max-width: 10rem;
-    margin-top: 3vh;
-    margin-left: 1vw;
-}
 
 /* CSS pour la mise en forme des formulaires */
 
@@ -145,9 +185,37 @@ form input[type="submit"]{
 
 /* Fin de la CSS pour les formulaires */
 
+
+.membres h1{
+    text-align: center;
+}
+
+.membres a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.membres hr{
+    max-width: 20vw;
+}
+
+
+.evenement form{
+    text-align: center;
+}
+
+.evenement textarea{
+    width: 70rem;
+    height: 10vh;
+}
+
+.evenement button{
+    width: 5vw;
+}
+
 footer{
     text-align: center;
     position: absolute;
-    width: 100%; height: 50px;
+    width: 100%; height: 20px;
     bottom: 0; left: 0; right: 0;
 }

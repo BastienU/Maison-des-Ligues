@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Utilisateur;
+use App\Models\Utilisateur;
+use App\Message;
+use Illuminate\Http\Request;
 
 class UtilisateursController extends Controller
 {
@@ -19,11 +21,12 @@ class UtilisateursController extends Controller
     public function voir()
     {
         $email = request('email');
-
-        $utilisateur = Utilisateur::where('email', $email)->first();
-
+        
+        $utilisateur = Utilisateur::where('email', $email)->first();            
+        
         return view ('utilisateur', [
             'utilisateur' => $utilisateur,
-        ]);
+            // 'messages' => $messages,
+        ]); 
     }
 }

@@ -3,11 +3,9 @@
 @section('contenu')
 
     <div class="section">
-        <h1 class="title is-1">Mon compte</h1>
+        <h1 class="title is-1" align="center">Mon compte</h1>
 
-        <p>Vous êtes bien connecté.</p>
-
-        <a href="/deconnexion" class="button">Déconnexion</a>
+        <p align="center">Vous êtes bien connecté.</p>
 
         <div class="modification">
         <fieldset>
@@ -19,32 +17,32 @@
                 {{ csrf_field() }}
                 
                 <label for="name">Nom</label>
-                <input type="text" id="name" name="nom" placeholder="Nom" autofocus="true">
+                <input type="text" id="name" name="nom" placeholder="Nom" autofocus="true" value="{{ auth()->user()->nom }}">
                 {{-- Permet de retourner la première erreur du champ nom. --}}
                 @if($errors->has('nom'))
                     <p>{{ $errors->first('nom') }}</p>
                 @endif
 
                 <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" name="prenom" placeholder="Prénom">
+                <input type="text" id="firstname" name="prenom" placeholder="Prénom" value="{{ auth()->user()->prenom }}">
                 @if($errors->has('prenom'))
                     <p>{{ $errors->first('prenom') }}</p>
                 @endif
 
                 <label for="age">Age</label>
-                <input type="age" id="age" name="age" placeholder="Age">
+                <input type="age" id="age" name="age" placeholder="Age" value="{{ auth()->user()->age }}">
                 @if($errors->has('age'))
                     <p>{{ $errors->first('age') }}</p>
                 @endif
                 
                 <label for="ville">Ville</label>
-                <input type="ville" id="ville" name="ville" placeholder="Ville">
+                <input type="ville" id="ville" name="ville" placeholder="Ville" value="{{ auth()->user()->ville }}">
                 @if($errors->has('ville'))
                     <p>{{ $errors->first('ville') }}</p>
                 @endif
 
                 <label for="email">Mail</label>
-                <input type="email" id="email" name="email" placeholder="Mail">
+                <input type="email" id="email" name="email" placeholder="Mail" value="{{ auth()->user()->email }}">
                 @if($errors->has('email'))
                     <p>{{ $errors->first('email') }}</p>
                 @endif
@@ -56,7 +54,6 @@
                 @endif
 
                 <input type="submit" value="Enregistrer">
-
             </form>
         </fieldset>
     </div>

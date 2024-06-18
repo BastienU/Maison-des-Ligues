@@ -8,13 +8,6 @@ class CompteController extends Controller
 {
     public function accueil() 
     {
-        //Vérifie que l'utilisateur est connecté.
-        if(auth()->guest()) 
-        {
-            return redirect('/connexion')->withErrors([
-                'email' => "Vous devez être connecté pour voir cette page.",
-            ]);
-        }
         return view('mon-compte');
     }
 
@@ -27,10 +20,10 @@ class CompteController extends Controller
 
     public function modification()
     {
-        if(auth()->guest()) 
-        {
-            return redirect('/connexion');
-        }
+        // if(auth()->guest()) 
+        // {
+        //     return redirect('/connexion');
+        // }
 
         request()->validate([
             'nom' => ['required'],
@@ -41,7 +34,7 @@ class CompteController extends Controller
             'password' => ['required', 'min:8'],
         ]);
 
-        //Méthode de récupération de l'utilisateur connecté et mise à jour.
+        //Méthode de récupération de l'utilisateur connecté et mise à jour en BDD.
         auth()->user()->update([
             'nom' => request('nom'),
             'prenom' => request('prenom'),
@@ -51,6 +44,13 @@ class CompteController extends Controller
             'password' => bcrypt(request('password')),
         ]);
 
-        return redirect('/mon-compte');
+        return redirect('/utilisateurs');
+    }
+
+    public function destroy()
+    {
+        auth()->user()->delete();
+
+        return redirect('/connexion');
     }
 }

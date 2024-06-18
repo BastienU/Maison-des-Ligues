@@ -5,7 +5,7 @@
     <div class="connexion">
         <fieldset>
             <legend>
-                Formulaire d'inscription
+                Formulaire de connexion
             </legend>
             <form action="/connexion" method="post">
 

@@ -1,15 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Utilisateur;
-use App\Message;
 
-class MessagesController extends Controller
+use App\Models\Message;
+
+class EventsController extends Controller
 {
     public function nouveau()
     {
-        dump("Nouvelle publication");
-
+        // dump("Nouvelle publication");
         request()->validate([
             'message' => ['required'],             
         ]);
@@ -19,11 +18,10 @@ class MessagesController extends Controller
             'contenu' => request('message'),
         ]);
 
-        $messages= Message::all();
+        $events = Message::all();
 
-        return view ('events', [
-            'utilisateur' => $utilisateur,
-             'messages' => $messages,
+        return view('events', [
+            'events' => $events,
         ]);
     }
 }

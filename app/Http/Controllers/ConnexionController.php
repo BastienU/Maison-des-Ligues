@@ -26,7 +26,8 @@ class ConnexionController extends Controller
 
         if ($resultat)
         {
-            return redirect('/mon-compte');
+            // return redirect('/mon-compte');
+            return redirect('/utilisateurs');
         }
 
         //Fonction back() permet de rediriger vers la page précédente
