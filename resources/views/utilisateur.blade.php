@@ -3,8 +3,6 @@
 @section('contenu')
 
     <div class="section">           
-        
-        {{-- <h1 class="title is-1" align="center">{{ $utilisateur->email }}</h1> --}}
 
         @if($utilisateur)
             <h1 class="title is-1" align="center">{{ auth()->user()->nom }}&nbsp;{{ auth()->user()->prenom }}</h1>
@@ -16,7 +14,7 @@
                     Formulaire de publication d'évènement
                 </legend>
                 
-                <form action="/events" methode="post">
+                <form action="{{ route('events.store') }}" method="post">
                     {{ csrf_field() }}
                     
                     <div class="field">

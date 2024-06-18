@@ -186,6 +186,7 @@ form input[type="submit"]{
 /* Fin de la CSS pour les formulaires */
 
 
+/* Début css pour la page affichant le membre connecté */
 .membres h1{
     text-align: center;
 }
@@ -198,8 +199,10 @@ form input[type="submit"]{
 .membres hr{
     max-width: 20vw;
 }
+/* Fin css pour la page affichant le membre connecté */
 
 
+/* Début css pour la page du formulaire de publication d'évènements */
 .evenement form{
     text-align: center;
 }
@@ -212,10 +215,63 @@ form input[type="submit"]{
 .evenement button{
     width: 5vw;
 }
+/* Fin css pour la page du formulaire de publication d'évènements */
+
+.publication{
+    margin-top: -7vh;
+    margin-left: 2vw;
+}
+
+.publication a{
+    font-size: 1.6rem;
+    background-color: #589DE1;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    text-decoration:none;
+    z-index: 1;
+}
+
+.modifier{
+    margin-top: 5rem;
+    margin-left: 8vw;
+}
+
+.modifier a{
+    font-size: 1.6rem;
+    background-color: #589DE1;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    text-decoration:none;
+    z-index: 1;
+}
+
+#supprimer{
+    font-size: 1.6rem;
+    background-color: #589DE1;
+    padding: 0.65rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(112, 25, 25);
+    font-weight: bold;
+    border-radius: 1.5rem;
+    margin-top: -2.9rem;
+    margin-left: 42vw;
+    border-color: transparent;
+    z-index: 0;
+}
 
 footer{
+    color: white;
     text-align: center;
-    position: absolute;
-    width: 100%; height: 20px;
-    bottom: 0; left: 0; right: 0;
+    padding: 10px 0;
+    position: sticky;
+    top: 100vh;
 }

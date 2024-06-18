@@ -9,9 +9,13 @@
 </head>
 <body>
     <nav>
-        <a href="/utilisateurs">
+        @if(auth()->check())
+            <a href="/utilisateurs">
+                <img src="/asset/Blason_M2L.png" alt="logoM2L">
+            </a>
+        @else
             <img src="/asset/Blason_M2L.png" alt="logoM2L">
-        </a>
+        @endif
         <h1>Maison des ligues</h1>
         <ul>
             <li><a href="/mon-compte">MODIFIER LE COMPTE</a></li>
@@ -22,8 +26,7 @@
     <br><br><br><br>
 @yield('contenu')
 
-{{-- <footer> &copy; - 2024 </footer> --}}
-
-{{-- <footer align="center">
+<br><br>
+<footer>
     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-</footer> --}}
+</footer>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('accueil');
 });
 
 Route::get('/inscription', 'App\Http\Controllers\InscriptionController@formulaire');
@@ -24,12 +24,16 @@ Route::group([
     ], function() {
     Route::get('/mon-compte', 'App\Http\Controllers\CompteController@accueil');
     Route::post('/modification', 'App\Http\Controllers\CompteController@modification');
-    Route::post('/suppression', 'App\Http\Controllers\CompteController@destroy');
+
     //Ne fonctionne pas : 
     // Route::post('/messages', 'App\Http\Controllers\MessagesController@nouveau');
-});
 
-Route::get('/events', 'App\Http\Controllers\EventsController@nouveau');
+    Route::get('/events', 'App\Http\Controllers\EventsController@index')->name('events.index');
+    Route::post('/events', 'App\Http\Controllers\EventsController@nouveau')->name('events.store');
+    Route::get('/events/{id}/edit', 'App\Http\Controllers\EventsController@edit')->name('events.edit');
+    Route::put('/events/{id}', 'App\Http\Controllers\EventsController@update')->name('events.update');
+    Route::delete('/events/{id}', 'App\Http\Controllers\EventsController@destroy')->name('events.destroy');
+});
 
 Route::get('/deconnexion', 'App\Http\Controllers\CompteController@deconnexion');
 
